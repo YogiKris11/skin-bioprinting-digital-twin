@@ -1,0 +1,38 @@
+{
+  "source_dataset": "CECT Open-Source Bioink Database",
+  "published_source_records": 807,
+  "complete_four_parameter_source_records": 395,
+  "model_fit_rows": 4400,
+  "model_fit_composition": {
+    "published_source_parameter_records": 395,
+    "scenario_derived_parameter_samples": 4005
+  },
+  "integrated_explorer_rows": 5807,
+  "integrated_explorer_composition": {
+    "published_source_records": 807,
+    "parameter_space_scenario_records": 5000
+  },
+  "parameter_space_scenario_rows": 5000,
+  "measured_filament_width_labels_in_cect": 0,
+  "measured_quality_labels_in_cect": 0,
+  "model": "IsolationForest",
+  "model_task": "Unsupervised anomaly / reference-envelope screening",
+  "model_features": [
+    "pressure_min_kpa",
+    "speed_min_mm_s",
+    "temperature_min_c",
+    "needle_diameter_um_explicit"
+  ],
+  "model_target": null,
+  "model_configuration": {
+    "n_estimators": 400,
+    "contamination": 0.05,
+    "imputation": "median",
+    "scaling": "RobustScaler",
+    "random_state": 42
+  },
+  "provenance_note": "The model-fit table combines 395 complete source parameter records with 4,005 parameter samples derived from the source-linked scenario pool. Derived samples are not independent experimental observations.",
+  "validation_note": "No ground-truth fault labels are available in the CECT table; accuracy, sensitivity, specificity and print-quality prediction metrics are not calculated.",
+  "skin_specificity": "CECT is general extrusion-based bioprinting data, not a skin-only dataset.",
+  "generated_utc": "2026-11-04T13:53:00+00:00"
+}
